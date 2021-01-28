@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/mainMenu/trademark.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/mainMenu/continue.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/mainMenu/title.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/mainMenu/newGame.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/mainMenu/backgraound.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/mainMenu/exit.png" type="Texture" id=6]
+[ext_resource path="res://escenes/mainMenu/MainMenu.gd" type="Script" id=7]
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Backgraound" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 5 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 295.0
+margin_top = 192.0
+margin_right = 729.0
+margin_bottom = 407.0
+
+[node name="Title" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_right = 434.0
+margin_bottom = 60.0
+texture = ExtResource( 3 )
+
+[node name="MenuOption" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 434.0
+margin_bottom = 177.0
+
+[node name="NewGameButton" type="TextureButton" parent="CenterContainer/VBoxContainer/MenuOption"]
+margin_right = 434.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 4 )
+
+[node name="ResumeGame" type="TextureRect" parent="CenterContainer/VBoxContainer/MenuOption"]
+margin_top = 39.0
+margin_right = 434.0
+margin_bottom = 74.0
+texture = ExtResource( 2 )
+
+[node name="Exit" type="TextureButton" parent="CenterContainer/VBoxContainer/MenuOption"]
+margin_top = 78.0
+margin_right = 434.0
+margin_bottom = 113.0
+texture_normal = ExtResource( 6 )
+
+[node name="Logo" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_top = 181.0
+margin_right = 434.0
+margin_bottom = 215.0
+texture = ExtResource( 1 )
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuOption/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuOption/Exit" to="." method="_on_Exit_pressed"]

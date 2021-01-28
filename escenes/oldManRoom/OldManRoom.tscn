@@ -1,0 +1,176 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/images/oldManRoom/oldman.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/oldManRoom/backgraound.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/oldManRoom/object.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/oldManRoom/backArrow.png" type="Texture" id=4]
+[ext_resource path="res://escenes/oldManRoom/OldManRoom.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/oldManRoom/album/album.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/oldManRoom/album/photo.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/oldManRoom/album/close.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/oldManRoom/explanation/close.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/oldManRoom/explanation/textBox.png" type="Texture" id=10]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OldMan" type="TextureButton" parent="."]
+margin_left = 440.568
+margin_top = 148.534
+margin_right = 592.568
+margin_bottom = 460.534
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Object1" type="TextureButton" parent="."]
+margin_left = 25.1754
+margin_top = 251.753
+margin_right = 177.175
+margin_bottom = 359.753
+texture_normal = ExtResource( 3 )
+
+[node name="Object2" type="TextureRect" parent="."]
+margin_left = 835.821
+margin_top = 176.227
+margin_right = 987.821
+margin_bottom = 284.227
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Object3" type="TextureRect" parent="."]
+margin_left = 261.823
+margin_top = 47.8331
+margin_right = 413.823
+margin_bottom = 155.833
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackArrow" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Album" type="CenterContainer" parent="."]
+visible = false
+margin_right = 1020.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AlbumBackground" type="TextureRect" parent="Album"]
+margin_left = 70.0
+margin_top = 52.0
+margin_right = 950.0
+margin_bottom = 550.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="VBoxContainer" parent="Album"]
+margin_left = 308.0
+margin_top = 57.0
+margin_right = 712.0
+margin_bottom = 545.0
+
+[node name="Close" type="TextureButton" parent="Album/GridContainer"]
+margin_right = 108.0
+margin_bottom = 80.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Album/GridContainer"]
+margin_top = 84.0
+margin_right = 404.0
+margin_bottom = 284.0
+
+[node name="Child" type="TextureButton" parent="Album/GridContainer/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 7 )
+
+[node name="Youth" type="TextureRect" parent="Album/GridContainer/HBoxContainer"]
+margin_left = 204.0
+margin_right = 404.0
+margin_bottom = 200.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Album/GridContainer"]
+margin_top = 288.0
+margin_right = 404.0
+margin_bottom = 488.0
+
+[node name="Adult" type="TextureRect" parent="Album/GridContainer/HBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 7 )
+
+[node name="Old" type="TextureRect" parent="Album/GridContainer/HBoxContainer2"]
+margin_left = 204.0
+margin_right = 404.0
+margin_bottom = 200.0
+texture = ExtResource( 7 )
+
+[node name="TextExplanation" type="CenterContainer" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 596.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExplanationBackground2" type="TextureRect" parent="TextExplanation"]
+margin_left = 198.0
+margin_top = 164.0
+margin_right = 825.0
+margin_bottom = 431.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextExplanation"]
+margin_left = 418.0
+margin_top = 249.0
+margin_right = 605.0
+margin_bottom = 347.0
+
+[node name="CloseText" type="TextureButton" parent="TextExplanation/VBoxContainer"]
+margin_right = 108.0
+margin_bottom = 80.0
+size_flags_horizontal = 0
+texture_normal = ExtResource( 9 )
+
+[node name="TextForExplanation" type="Label" parent="TextExplanation/VBoxContainer"]
+margin_top = 84.0
+margin_right = 187.0
+margin_bottom = 98.0
+text = "I dont wanna think about that"
+[connection signal="pressed" from="OldMan" to="." method="_on_OldMan_pressed"]
+[connection signal="pressed" from="Object1" to="." method="_on_Object1_pressed"]
+[connection signal="pressed" from="BackArrow" to="." method="_on_BackArrow_pressed"]
+[connection signal="pressed" from="Album/GridContainer/Close" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Album/GridContainer/HBoxContainer/Child" to="." method="_on_Child_pressed"]
+[connection signal="pressed" from="TextExplanation/VBoxContainer/CloseText" to="." method="_on_CloseText_pressed"]
