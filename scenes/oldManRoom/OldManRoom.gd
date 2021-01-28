@@ -29,7 +29,7 @@ func _on_BackArrow_pressed():
 
 func _on_OldMan_pressed():
 	pass # Replace with function body.
-	get_node("Album").visible = true
+	
 
 
 func _on_TextureButton_pressed():
@@ -83,3 +83,8 @@ func _on_Adult_pressed():
 func _on_Old_pressed():
 	pass # Replace with function body.
 	get_tree().change_scene("res://scenes/endings/good/goodEnding.tscn")
+
+
+func _on_photoAlbum_pressed():
+	pass # Replace with function body.
+	get_node("Album").visible = true
