@@ -18,7 +18,7 @@ func _ready():
 
 func _on_BackArrow_pressed():
 	pass # Replace with function body.
-	get_tree().change_scene("res://escenes/mainMenu/MainMenu.tscn")
+	get_tree().change_scene("res://scenes/mainMenu/MainMenu.tscn")
 
 
 func _on_OldMan_pressed():
@@ -33,7 +33,7 @@ func _on_TextureButton_pressed():
 
 func _on_Child_pressed():
 	pass # Replace with function body.
-	get_tree().change_scene("res://escenes/childMiniGame/ChildMiniGame.tscn")
+	get_tree().change_scene("res://scenes/childMiniGame/ChildMiniGame.tscn")
 
 
 func _on_CloseText_pressed():

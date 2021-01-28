@@ -4,12 +4,13 @@
 [ext_resource path="res://assets/images/oldManRoom/backgraound.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/oldManRoom/object.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/oldManRoom/backArrow.png" type="Texture" id=4]
-[ext_resource path="res://escenes/oldManRoom/OldManRoom.gd" type="Script" id=5]
+[ext_resource path="res://scenes/oldManRoom/OldManRoom.gd" type="Script" id=5]
 [ext_resource path="res://assets/images/oldManRoom/album/album.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/oldManRoom/album/photo.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/oldManRoom/album/close.png" type="Texture" id=8]
 [ext_resource path="res://assets/images/oldManRoom/explanation/close.png" type="Texture" id=9]
 [ext_resource path="res://assets/images/oldManRoom/explanation/textBox.png" type="Texture" id=10]
+
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )

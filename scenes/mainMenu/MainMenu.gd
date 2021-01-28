@@ -1,4 +1,4 @@
-extends Node2D
+extends MarginContainer
 
 
 # Declare member variables here. Examples:
@@ -16,7 +16,11 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
+func _on_NewGameButton_pressed():
 	pass # Replace with function body.
-	global.child = true
-	get_tree().change_scene("res://escenes/oldManRoom/OldManRoom.tscn")
+	get_tree().change_scene("res://scenes/oldManRoom/OldManRoom.tscn")
+
+
+func _on_Exit_pressed():
+	pass # Replace with function body.
+	get_tree().quit()
