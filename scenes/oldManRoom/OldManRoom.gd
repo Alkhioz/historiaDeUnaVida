@@ -11,6 +11,8 @@ func _ready():
 	pass # Replace with function body.
 	if global.child == true:
 		get_node("Album/GridContainer/HBoxContainer/Youth").disabled = false
+		get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
+		get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
 	if global.youth == true:
 		get_node("Album/GridContainer/HBoxContainer2/Adult").disabled = false
 	if global.adult == true:
