@@ -1,27 +1,84 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/youthMiniGame/youthMiniGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/youthMiniGame/backgraound.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/youthMiniGame/button.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/youthMiniGame/pass_control.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 61.9476, 46.8535 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( -0.692078, 1.3065 )
 script = ExtResource( 1 )
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="."]
-margin_left = 289.0
-margin_top = 236.0
-margin_right = 515.0
-margin_bottom = 288.0
+margin_left = 752.226
+margin_top = 512.929
+margin_right = 978.226
+margin_bottom = 564.929
 text = "Finish Mini Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 311.274
-margin_top = 168.133
-margin_right = 476.274
-margin_bottom = 217.133
-text = "Youth Mini Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="PlayNoteRed" type="StaticBody2D" parent="."]
+position = Vector2( 120.544, 355.914 )
+
+[node name="red" type="Sprite" parent="PlayNoteRed"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteRed"]
+shape = SubResource( 1 )
+
+[node name="PlayNoteGreen" type="StaticBody2D" parent="."]
+position = Vector2( 294.84, 355.797 )
+
+[node name="red" type="Sprite" parent="PlayNoteGreen"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteGreen"]
+shape = SubResource( 1 )
+
+[node name="PlayNoteBlue" type="StaticBody2D" parent="."]
+position = Vector2( 458.883, 355.797 )
+
+[node name="red" type="Sprite" parent="PlayNoteBlue"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteBlue"]
+shape = SubResource( 1 )
+
+[node name="PlayNoteYellow" type="StaticBody2D" parent="."]
+position = Vector2( 624.977, 355.797 )
+
+[node name="red" type="Sprite" parent="PlayNoteYellow"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteYellow"]
+shape = SubResource( 1 )
+
+[node name="SpawnerRed" type="Sprite" parent="."]
+position = Vector2( 124.634, -185.227 )
+texture = ExtResource( 3 )
+
+[node name="SpawnerGreen" type="Sprite" parent="."]
+position = Vector2( 303.031, -185.227 )
+texture = ExtResource( 3 )
+
+[node name="SpawnerBlue" type="Sprite" parent="."]
+position = Vector2( 465.024, -185.227 )
+texture = ExtResource( 3 )
+
+[node name="SpawnerYellow" type="Sprite" parent="."]
+position = Vector2( 619.525, -182.954 )
+texture = ExtResource( 3 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

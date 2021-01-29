@@ -3,6 +3,16 @@ extends Node
 var child = false
 var youth = false
 var adult = false
+
+var musicNoteCount = 100
+
+var red = false
+var blue = false
+var green = false
+var yellow = false
+
+var destroyNote
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
