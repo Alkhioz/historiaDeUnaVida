@@ -1,6 +1,51 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/adultMiniGame/adultMiniGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/adulMiniGame/player.png" type="Texture" id=2]
+[ext_resource path="res://scenes/adultMiniGame/player.gd" type="Script" id=3]
+[ext_resource path="res://scenes/adultMiniGame/Obstacles.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/adultMiniGame/escenario.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/adulMiniGame/background.png" type="Texture" id=6]
+[ext_resource path="res://scenes/adultMiniGame/parallax.gd" type="Script" id=7]
+[ext_resource path="res://assets/images/adulMiniGame/GameSuegra.png" type="Texture" id=8]
+[ext_resource path="res://scenes/adultMiniGame/suegra.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 34.8519, 82.1912 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 216.73, 35.3321 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 46.572, 305.628 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -34,5 +79,114 @@ text = "finish minigame fail"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="parallax" type="Node2D" parent="."]
+position = Vector2( 6067.14, 249.762 )
+scale = Vector2( 1.8, 1 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="parallax"]
+scale = Vector2( 5.84309, 2.51298 )
+texture = ExtResource( 6 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 311.151, 401.455 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="player"]
+position = Vector2( -0.201843, -1.62857 )
+scale = Vector2( 0.647501, 0.610396 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 1.49012e-08, -2 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="escenario" type="Area2D" parent="."]
+position = Vector2( 2049.62, 545.202 )
+script = ExtResource( 5 )
+
+[node name="floor" type="StaticBody2D" parent="escenario"]
+position = Vector2( 2236.26, 0 )
+scale = Vector2( 2.09595, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="escenario/floor"]
+margin_left = -2083.82
+margin_top = -36.6348
+margin_right = 1681.18
+margin_bottom = 32.3652
+rect_scale = Vector2( 1.81416, 1.84298 )
+color = Color( 0.247059, 0.227451, 0.227451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escenario/floor"]
+position = Vector2( -4.55823, -1.73468 )
+scale = Vector2( 10.24, 1 )
+shape = SubResource( 1 )
+
+[node name="dron3" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( -855.352, -63.1928 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron4" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( -338.204, -63.1928 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron5" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 444.506, -63.1928 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron2" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( -1191.7, -60.2606 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron6" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 1257.02, -60.2606 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron7" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 1558.41, -60.2606 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron8" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 2476.25, -63.1928 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron9" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 3577.37, -63.1928 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron10" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 4017.52, -60.2606 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="dron11" parent="escenario" instance=ExtResource( 4 )]
+position = Vector2( 4691.96, -60.2606 )
+scale = Vector2( 0.328031, 0.409451 )
+
+[node name="Goal" type="Area2D" parent="escenario"]
+position = Vector2( 5856.9, -266.19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escenario/Goal"]
+shape = SubResource( 3 )
+
+[node name="suegra" type="Area2D" parent="."]
+position = Vector2( 103.094, 378.692 )
+scale = Vector2( 3.05318, 2.85797 )
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="suegra"]
+frames = SubResource( 8 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suegra"]
+polygon = PoolVector2Array( -1.89626, -27.8929, 20.406, -14.8971, 16.8579, -8.12845, 25.9815, 4.32585, 5.45334, 29.5052, -17.8626, 4.32585 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="body_entered" from="escenario/Goal" to="escenario" method="_on_Goal_body_entered"]
+[connection signal="body_entered" from="suegra" to="suegra" method="_on_suegra_body_entered"]
