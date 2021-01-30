@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/images/youthMiniGame/button/normal/GameGuitarRojo.png" type="Texture" id=1]
 [ext_resource path="res://scenes/youthMiniGame/MusicNote.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/sfx/mixkit-wrong-electricity-buzz-955.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.9154, 29.56 )
@@ -17,6 +18,9 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_MusicNote_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_MusicNote_body_exited"]
 [connection signal="screen_exited" from="VisibilityEnabler2D" to="." method="_on_VisibilityEnabler2D_screen_exited"]

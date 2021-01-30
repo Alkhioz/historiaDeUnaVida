@@ -24,8 +24,10 @@ func _on_Timer_timeout():
 	if global.createdNotes == noteLimit:
 		if global.destroyedNotes == noteLimit:
 			if global.points > (noteLimit/1.5):
-				global.youth = true
-			get_tree().change_scene("res://scenes/oldManRoom/OldManRoom.tscn")
+				global.youth = 2
+			else:
+				global.youth = 1
+			get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")
 	else:
 		var mnote = MusicNote.instance()
 		rng.randomize()
@@ -55,19 +57,23 @@ func _input(event):
 		if global.red == true:
 			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActRojo.png")
 			global.points += 1
+			get_node("scoreDisplayer").text = (str(global.points) + "/30 played notes")
 			global.red = false
 	if Input.is_key_pressed(KEY_S):
 		if global.green == true:
 			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActVerde.png")
 			global.points += 1
+			get_node("scoreDisplayer").text = (str(global.points) + "/30 played notes")
 			global.green = false
 	if Input.is_key_pressed(KEY_D):
 		if global.blue == true:
 			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActAzul.png")
 			global.points += 1
+			get_node("scoreDisplayer").text = (str(global.points) + "/30 played notes")
 			global.blue = false
 	if Input.is_key_pressed(KEY_F):
 		if global.yellow == true:
 			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActNaranja.png")
 			global.points += 1
+			get_node("scoreDisplayer").text = (str(global.points) + "/30 played notes")
 			global.yellow = false

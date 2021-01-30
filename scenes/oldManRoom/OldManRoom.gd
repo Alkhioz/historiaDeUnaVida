@@ -16,12 +16,26 @@ func _ready():
 			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
 			get_node("Album/Child").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
 		else:
-			get_node("Album/Child").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidFail.png")
+			get_node("Album/Child").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")
 		get_node("Album/Child").disabled = true
 	if global.youth > 0:
 		get_node("Album/Adult").disabled = false
+		if global.youth == 2:
+#			get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
+#			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
+			get_node("Album/Youth").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
+		else:
+			get_node("Album/Youth").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")
+		get_node("Album/Youth").disabled = true
 	if global.adult > 0:
 		get_node("Album/Old").disabled = false
+		if global.adult == 2:
+#			get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
+#			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
+			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
+		else:
+			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")
+		get_node("Album/Adult").disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,14 +83,14 @@ func _on_Youth_pressed():
 
 func _on_Object3_pressed():
 	pass # Replace with function body.
-	if global.youth == 1:
+	if global.youth == 2:
 		get_node("TextExplanation/TextForExplanation").text = "This is my old guitar"
 	get_node("TextExplanation").visible = true
 
 
 func _on_Object2_pressed():
 	pass # Replace with function body.
-	if global.adult == 1:
+	if global.adult == 2:
 		get_node("TextExplanation/TextForExplanation").text = "This is a photo of mi wedding"
 	get_node("TextExplanation").visible = true
 	

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-paper-scroll-in-an-office-2383.wav-6ec79c9a0a9a80c05f88e00dd1ffb50a.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/mixkit-paper-scroll-in-an-office-2383.wav"
+dest_files=[ "res://.import/mixkit-paper-scroll-in-an-office-2383.wav-6ec79c9a0a9a80c05f88e00dd1ffb50a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -43,16 +43,20 @@ func _on_MusicNote_body_exited(body):
 			if global.red == true:
 				global.red = false
 				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+				get_node("AudioStreamPlayer").play()
 		"PlayNoteGreen":
 			if global.green == true:
 				global.green = false
 				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+				get_node("AudioStreamPlayer").play()
 		"PlayNoteBlue":
 			if global.blue == true:
 				global.blue = false
 				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+				get_node("AudioStreamPlayer").play()
 		"PlayNoteYellow":
 			if global.yellow == true:
 				global.yellow = false
 				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+				get_node("AudioStreamPlayer").play()
 	

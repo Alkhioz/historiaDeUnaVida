@@ -19,10 +19,10 @@ func _ready():
 func _on_Button_pressed():
 	pass # Replace with function body.
 	global.child = 2
-	get_tree().change_scene("res://scenes/oldManRoom/OldManRoom.tscn")
+	get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")
 
 
 func _on_Button2_pressed():
 	pass # Replace with function body.
 	global.child = 1
-	get_tree().change_scene("res://scenes/oldManRoom/OldManRoom.tscn")
+	get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")

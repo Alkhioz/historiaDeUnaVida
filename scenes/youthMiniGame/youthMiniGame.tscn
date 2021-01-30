@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/youthMiniGame/youthMiniGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/youthMiniGame/backgraound.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/youthMiniGame/button.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/youthMiniGame/pass_control.png" type="Texture" id=4]
+[ext_resource path="res://assets/audio/music/mixkit-ride-the-waves-48.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.8131, 30.1787 )
@@ -75,3 +76,27 @@ texture = ExtResource( 3 )
 [node name="SpawnerYellow" type="Sprite" parent="."]
 position = Vector2( 619.525, -182.954 )
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 802.0
+margin_top = 512.0
+margin_right = 964.0
+margin_bottom = 556.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scoreDisplayer" type="Label" parent="."]
+margin_left = 819.903
+margin_top = 527.643
+margin_right = 942.903
+margin_bottom = 541.643
+text = "0/30 played notes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
