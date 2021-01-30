@@ -9,13 +9,18 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-	if global.child == true:
+	if global.child > 0:
 		get_node("Album/Youth").disabled = false
-		get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
-		get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
-	if global.youth == true:
+		if global.child == 2:
+			get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
+			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
+			get_node("Album/Child").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
+		else:
+			get_node("Album/Child").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidFail.png")
+		get_node("Album/Child").disabled = true
+	if global.youth > 0:
 		get_node("Album/Adult").disabled = false
-	if global.adult == true:
+	if global.adult > 0:
 		get_node("Album/Old").disabled = false
 
 
@@ -52,7 +57,7 @@ func _on_CloseText_pressed():
 
 func _on_Object1_pressed():
 	pass # Replace with function body.
-	if global.child == true:
+	if global.child == 2:
 		get_node("TextExplanation/TextForExplanation").text = "This is my spelling trophy"
 	get_node("TextExplanation").visible = true
 
@@ -64,14 +69,14 @@ func _on_Youth_pressed():
 
 func _on_Object3_pressed():
 	pass # Replace with function body.
-	if global.youth == true:
+	if global.youth == 1:
 		get_node("TextExplanation/TextForExplanation").text = "This is my old guitar"
 	get_node("TextExplanation").visible = true
 
 
 func _on_Object2_pressed():
 	pass # Replace with function body.
-	if global.adult == true:
+	if global.adult == 1:
 		get_node("TextExplanation/TextForExplanation").text = "This is a photo of mi wedding"
 	get_node("TextExplanation").visible = true
 	

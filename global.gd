@@ -1,8 +1,8 @@
 extends Node
 
-var child = false
-var youth = false
-var adult = false
+var child = 0
+var youth = 0
+var adult = 0
 
 var createdNotes = 0
 var destroyedNotes = 0
