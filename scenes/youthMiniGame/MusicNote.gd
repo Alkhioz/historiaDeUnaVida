@@ -20,18 +20,21 @@ func _on_MusicNote_body_entered(body):
 	match notePlayerName:
 		"PlayNoteRed":
 			global.red = true
+			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActRojo.png")
 		"PlayNoteGreen":
 			global.green = true
+			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActVerde.png")
 		"PlayNoteBlue":
 			global.blue = true
+			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActAzul.png")
 		"PlayNoteYellow":
 			global.yellow = true
+			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActNaranja.png")
 	global.destroyNote = self
-#	#queue_free()
-#	pass # Replace with function body.
 
 
 func _on_VisibilityEnabler2D_screen_exited():
+	global.destroyedNotes += 1
 	queue_free()
 	pass # Replace with function body.
 
@@ -48,3 +51,4 @@ func _on_MusicNote_body_exited(body):
 			global.blue = false
 		"PlayNoteYellow":
 			global.yellow = false
+	get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")

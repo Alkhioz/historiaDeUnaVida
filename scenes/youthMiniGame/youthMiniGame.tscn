@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/images/youthMiniGame/pass_control.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 61.9476, 46.8535 )
+extents = Vector2( 39.8131, 30.1787 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -0.692078, 1.3065 )
@@ -20,47 +20,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 752.226
-margin_top = 512.929
-margin_right = 978.226
-margin_bottom = 564.929
-text = "Finish Mini Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="PlayNoteRed" type="StaticBody2D" parent="."]
-position = Vector2( 120.544, 355.914 )
+position = Vector2( 120.544, 457.883 )
 
 [node name="red" type="Sprite" parent="PlayNoteRed"]
+scale = Vector2( 0.729482, 0.699887 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteRed"]
 shape = SubResource( 1 )
 
 [node name="PlayNoteGreen" type="StaticBody2D" parent="."]
-position = Vector2( 294.84, 355.797 )
+position = Vector2( 294.84, 457.765 )
 
 [node name="red" type="Sprite" parent="PlayNoteGreen"]
+scale = Vector2( 0.708673, 0.645321 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteGreen"]
 shape = SubResource( 1 )
 
 [node name="PlayNoteBlue" type="StaticBody2D" parent="."]
-position = Vector2( 458.883, 355.797 )
+position = Vector2( 458.883, 457.765 )
 
 [node name="red" type="Sprite" parent="PlayNoteBlue"]
+scale = Vector2( 0.646245, 0.727169 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteBlue"]
 shape = SubResource( 1 )
 
 [node name="PlayNoteYellow" type="StaticBody2D" parent="."]
-position = Vector2( 624.977, 355.797 )
+position = Vector2( 624.977, 457.765 )
 
 [node name="red" type="Sprite" parent="PlayNoteYellow"]
+scale = Vector2( 0.672604, 0.672604 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteYellow"]
@@ -81,4 +75,3 @@ texture = ExtResource( 3 )
 [node name="SpawnerYellow" type="Sprite" parent="."]
 position = Vector2( 619.525, -182.954 )
 texture = ExtResource( 3 )
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

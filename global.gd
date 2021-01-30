@@ -4,7 +4,9 @@ var child = false
 var youth = false
 var adult = false
 
-var musicNoteCount = 100
+var createdNotes = 0
+var destroyedNotes = 0
+var points = 0
 
 var red = false
 var blue = false
