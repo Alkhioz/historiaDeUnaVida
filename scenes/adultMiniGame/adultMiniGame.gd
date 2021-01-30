@@ -14,15 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Button_pressed():
-	pass # Replace with function body.
-	global.adult = 2
-	get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")
-
-
-func _on_Button2_pressed():
-	pass # Replace with function body.
-	global.adult = 1
-	get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")

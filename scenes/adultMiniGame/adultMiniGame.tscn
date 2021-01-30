@@ -50,36 +50,6 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 347.473
-margin_top = 222.012
-margin_right = 527.473
-margin_bottom = 279.012
-text = "Finish Mini Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 368.273
-margin_top = 166.556
-margin_right = 523.273
-margin_bottom = 197.556
-text = "ADULT MINI GAME"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="."]
-margin_left = 347.916
-margin_top = 299.8
-margin_right = 526.916
-margin_bottom = 363.8
-text = "finish minigame fail"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="parallax" type="Node2D" parent="."]
 position = Vector2( 6067.14, 249.762 )
 scale = Vector2( 1.8, 1 )
@@ -181,12 +151,10 @@ script = ExtResource( 9 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="suegra"]
 frames = SubResource( 8 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suegra"]
 polygon = PoolVector2Array( -1.89626, -27.8929, 20.406, -14.8971, 16.8579, -8.12845, 25.9815, 4.32585, 5.45334, 29.5052, -17.8626, 4.32585 )
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="body_entered" from="escenario/Goal" to="escenario" method="_on_Goal_body_entered"]
 [connection signal="body_entered" from="suegra" to="suegra" method="_on_suegra_body_entered"]
