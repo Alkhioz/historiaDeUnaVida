@@ -60,7 +60,8 @@ func _on_TextureButton_pressed():
 
 func _on_Child_pressed():
 	pass # Replace with function body.
-	get_tree().change_scene("res://scenes/childMiniGame/ChildMiniGame.tscn")
+	global.instruction_controler = 0
+	get_tree().change_scene("res://scenes/oldManRoom/Instructions.tscn")
 
 
 func _on_CloseText_pressed():
@@ -77,8 +78,8 @@ func _on_Object1_pressed():
 
 
 func _on_Youth_pressed():
-	pass # Replace with function body.
-	get_tree().change_scene("res://scenes/youthMiniGame/youthMiniGame.tscn")
+	global.instruction_controler = 1
+	get_tree().change_scene("res://scenes/oldManRoom/Instructions.tscn")
 
 
 func _on_Object3_pressed():
@@ -97,8 +98,8 @@ func _on_Object2_pressed():
 
 
 func _on_Adult_pressed():
-	pass # Replace with function body.
-	get_tree().change_scene("res://scenes/adultMiniGame/adultMiniGame.tscn")
+	global.instruction_controler = 2
+	get_tree().change_scene("res://scenes/oldManRoom/Instructions.tscn")
 
 
 func _on_Old_pressed():

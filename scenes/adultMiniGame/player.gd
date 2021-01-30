@@ -16,13 +16,18 @@ func _ready():
 	pass # Replace with function body.
 
 func get_input():
-	var down = Input.is_key_pressed(KEY_D)
-	var jump = Input.is_key_pressed(KEY_W)
+	var jump = Input.is_key_pressed(KEY_A)
 	
 	if jump and is_on_floor():
 		jumping = true
 		velocity.y = jump_speed
 
+func play_hit():
+	get_node("hit").play()
+
+func play_death():
+	get_node("death").play()	
+	
 func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta

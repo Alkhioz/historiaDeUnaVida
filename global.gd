@@ -13,6 +13,8 @@ var blue = false
 var green = false
 var yellow = false
 
+var instruction_controler = 0
+
 var destroyNote
 
 # Declare member variables here. Examples:

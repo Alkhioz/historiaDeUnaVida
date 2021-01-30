@@ -20,5 +20,7 @@ func _ready():
 func _on_suegra_body_entered(body):
 	pass # Replace with function body.
 	if body.get_name() == "player":
+		body.play_death()
+		yield(get_tree().create_timer(0.5), "timeout")
 		global.adult = 1
 		get_tree().change_scene("res://scenes/oldManRoom/transition.tscn")

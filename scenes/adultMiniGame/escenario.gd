@@ -1,4 +1,4 @@
-extends Area2D
+extends TileMap
 
 var motion = Vector2()
 # Declare member variables here. Examples:

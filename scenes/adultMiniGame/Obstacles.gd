@@ -25,4 +25,5 @@ func _on_Obstacles_body_entered(body):
 	pass # Replace with function body.
 	if body.get_name() == "player":
 		body.position.x -= 30
+		body.play_hit()
 	queue_free()

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-games-music-706.wav-6432ba51f6d2fc61d56f6c63cfa47c51.sample"
+
+[deps]
+
+source_file="res://assets/audio/music/mixkit-games-music-706.wav"
+dest_files=[ "res://.import/mixkit-games-music-706.wav-6432ba51f6d2fc61d56f6c63cfa47c51.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
