@@ -53,17 +53,21 @@ func _on_Timer_timeout():
 func _input(event):
 	if Input.is_key_pressed(KEY_A):
 		if global.red == true:
-			get_node("SpawnerRed").remove_child(global.destroyNote)
+			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActRojo.png")
 			global.points += 1
+			global.red = false
 	if Input.is_key_pressed(KEY_S):
 		if global.green == true:
-			get_node("SpawnerGreen").remove_child(global.destroyNote)
+			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActVerde.png")
 			global.points += 1
+			global.green = false
 	if Input.is_key_pressed(KEY_D):
 		if global.blue == true:
-			get_node("SpawnerBlue").remove_child(global.destroyNote)
+			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActAzul.png")
 			global.points += 1
+			global.blue = false
 	if Input.is_key_pressed(KEY_F):
 		if global.yellow == true:
-			get_node("SpawnerYellow").remove_child(global.destroyNote)
+			global.destroyNote.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActNaranja.png")
 			global.points += 1
+			global.yellow = false

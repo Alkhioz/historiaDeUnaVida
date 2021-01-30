@@ -20,16 +20,12 @@ func _on_MusicNote_body_entered(body):
 	match notePlayerName:
 		"PlayNoteRed":
 			global.red = true
-			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActRojo.png")
 		"PlayNoteGreen":
 			global.green = true
-			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActVerde.png")
 		"PlayNoteBlue":
 			global.blue = true
-			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActAzul.png")
 		"PlayNoteYellow":
 			global.yellow = true
-			self.get_child(0).texture = load("res://assets/images/youthMiniGame/button/active/GameGuitarActNaranja.png")
 	global.destroyNote = self
 
 
@@ -44,11 +40,19 @@ func _on_MusicNote_body_exited(body):
 	var notePlayerNames = body.get_name()
 	match notePlayerNames:
 		"PlayNoteRed":
-			global.red = false
+			if global.red == true:
+				global.red = false
+				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
 		"PlayNoteGreen":
-			global.green = false
+			if global.green == true:
+				global.green = false
+				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
 		"PlayNoteBlue":
-			global.blue = false
+			if global.blue == true:
+				global.blue = false
+				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
 		"PlayNoteYellow":
-			global.yellow = false
-	get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+			if global.yellow == true:
+				global.yellow = false
+				get_node("Sprite").texture = load("res://assets/images/youthMiniGame/button/fail/GameGuitarFail.png")
+	
