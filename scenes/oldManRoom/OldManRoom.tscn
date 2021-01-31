@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/images/oldManRoom/oldman.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/oldManRoom/backgraound.png" type="Texture" id=2]
@@ -19,6 +19,10 @@
 [ext_resource path="res://assets/images/oldManRoom/album/child/GamePolaroidCh.png" type="Texture" id=17]
 [ext_resource path="res://assets/images/oldManRoom/album/youth/GamePolaroidHoverT.png" type="Texture" id=18]
 [ext_resource path="res://assets/images/oldManRoom/album/adult/GamePolaroidHoverA.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/oldManRoom/mainroom/bass/bassGray1.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/oldManRoom/mainroom/bass/bassGray2.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/oldManRoom/album/old/GamePolaroidBad.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/oldManRoom/album/old/GamePolaroidBadHover.png" type="Texture" id=23]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -75,11 +79,17 @@ __meta__ = {
 }
 
 [node name="Object3" type="TextureButton" parent="."]
-margin_left = 844.321
-margin_top = 164.464
-margin_right = 996.321
-margin_bottom = 272.464
-texture_normal = ExtResource( 3 )
+margin_left = 775.024
+margin_top = 122.038
+margin_right = 927.024
+margin_bottom = 293.038
+rect_rotation = -10.8636
+rect_scale = Vector2( 1.30258, 1.50068 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BackArrow" type="TextureButton" parent="."]
 margin_left = 19.0
@@ -159,7 +169,8 @@ margin_top = 295.315
 margin_right = 608.791
 margin_bottom = 434.315
 disabled = true
-texture_normal = ExtResource( 17 )
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
 expand = true
 
 [node name="TextExplanation" type="Popup" parent="."]

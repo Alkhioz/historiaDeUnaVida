@@ -10,7 +10,7 @@ margin_left = 284.009
 margin_top = 165.861
 margin_right = 515.009
 margin_bottom = 215.861
-text = "GO BACK TO MAIN MENU"
+text = "CLICK TO FINISH GAME"
 __meta__ = {
 "_edit_use_anchors_": false
 }

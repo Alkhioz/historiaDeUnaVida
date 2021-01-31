@@ -25,4 +25,4 @@ func _ready():
 
 func _on_Button_pressed():
 	pass # Replace with function body.
-	get_tree().change_scene("res://scenes/mainMenu/MainMenu.tscn")
+	get_tree().quit()

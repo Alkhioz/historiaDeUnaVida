@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var noteLimit = 30
+var noteLimit = global.controlSegundo
 
 const MusicNote = preload("res://scenes/youthMiniGame/MusicNote.tscn")
 var rng = RandomNumberGenerator.new()

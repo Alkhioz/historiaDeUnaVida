@@ -21,6 +21,8 @@ var instruction_controler = 0
 
 var destroyNote
 
+var controlSegundo = 5
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
