@@ -4,6 +4,10 @@ var child = 0
 var youth = 0
 var adult = 0
 
+var vocalNotes = 0
+var vocalKey = ""
+var vocalPoints = 0
+
 var createdNotes = 0
 var destroyedNotes = 0
 var points = 0

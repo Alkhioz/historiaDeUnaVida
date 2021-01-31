@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/childMiniGame/ChildMiniGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/music/mixkit-pop-05-695.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/images/ChildMiniGame/screenKey.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/ChildMiniGame/backgraound.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/ChildMiniGame/answer.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -34,5 +38,38 @@ text = "ESTE ES UN MINIJUEGO"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="screen" type="TextureRect" parent="."]
+margin_left = 97.0652
+margin_top = 80.323
+margin_right = 475.065
+margin_bottom = 319.323
+rect_scale = Vector2( 1.0407, 1.04 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="feedback" type="TextureRect" parent="."]
+margin_left = 168.955
+margin_top = 405.724
+margin_right = 419.955
+margin_bottom = 490.724
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

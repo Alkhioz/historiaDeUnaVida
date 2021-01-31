@@ -1,15 +1,15 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/adultMiniGame/adultMiniGame.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/adulMiniGame/GameRunnerGroom.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/adultMiniGame/GameRunnerGroom.png" type="Texture" id=2]
 [ext_resource path="res://scenes/adultMiniGame/player.gd" type="Script" id=3]
 [ext_resource path="res://scenes/adultMiniGame/Obstacles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/adultMiniGame/escenario.gd" type="Script" id=5]
-[ext_resource path="res://assets/images/adulMiniGame/background.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/adultMiniGame/background.png" type="Texture" id=6]
 [ext_resource path="res://scenes/adultMiniGame/parallax.gd" type="Script" id=7]
-[ext_resource path="res://assets/images/adulMiniGame/GameSuegra.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/adultMiniGame/GameSuegra.png" type="Texture" id=8]
 [ext_resource path="res://scenes/adultMiniGame/suegra.gd" type="Script" id=9]
-[ext_resource path="res://assets/images/adulMiniGame/GameRunnerTileset.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/adultMiniGame/GameRunnerTileset.png" type="Texture" id=10]
 [ext_resource path="res://assets/audio/music/mixkit-games-music-706.wav" type="AudioStream" id=11]
 [ext_resource path="res://assets/audio/sfx/mixkit-quick-ninja-strike-2146.wav" type="AudioStream" id=12]
 [ext_resource path="res://assets/audio/sfx/mixkit-punch-with-a-hard-whistle-2050.wav" type="AudioStream" id=13]
@@ -230,7 +230,7 @@ position = Vector2( 4.14099, -8.76733 )
 scale = Vector2( 2.81504, 2.46471 )
 frames = SubResource( 5 )
 animation = "running"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
@@ -325,6 +325,7 @@ script = ExtResource( 9 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="suegra"]
 frames = SubResource( 14 )
 animation = "idle"
+frame = 3
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suegra"]
