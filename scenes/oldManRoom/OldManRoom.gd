@@ -103,7 +103,7 @@ func _on_Object3_pressed():
 func _on_Object2_pressed():
 	pass # Replace with function body.
 	if global.adult == 2:
-		get_node("TextExplanation/TextForExplanation").text = "This is a photo of mi wedding"
+		get_node("TextExplanation/TextForExplanation").text = "This is a photo of my wedding"
 	get_node("TextExplanation").visible = true
 	
 
