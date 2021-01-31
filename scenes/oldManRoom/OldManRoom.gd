@@ -23,7 +23,7 @@ func _ready():
 		if global.youth == 2:
 #			get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
 #			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
-			get_node("Album/Youth").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
+			get_node("Album/Youth").texture_normal = load("res://assets/images/oldManRoom/album/youth/GamePolaroidSuccessT.png")
 		else:
 			get_node("Album/Youth").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")
 		get_node("Album/Youth").disabled = true
@@ -32,7 +32,7 @@ func _ready():
 		if global.adult == 2:
 #			get_node("Object1").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
 #			get_node("Object1").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
-			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/child/GamePolaroidSuccess.png")
+			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/adult/GamePolaroidSuccessA.png")
 		else:
 			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")
 		get_node("Album/Adult").disabled = true

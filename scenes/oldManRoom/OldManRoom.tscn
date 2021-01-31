@@ -52,10 +52,11 @@ __meta__ = {
 }
 
 [node name="Object1" type="TextureButton" parent="."]
-margin_left = 25.3958
-margin_top = 185.642
-margin_right = 177.396
-margin_bottom = 337.642
+margin_left = 0.970369
+margin_top = 236.42
+margin_right = 152.971
+margin_bottom = 388.42
+rect_scale = Vector2( 0.772527, 0.8 )
 texture_normal = ExtResource( 14 )
 texture_hover = ExtResource( 15 )
 expand = true
@@ -64,17 +65,20 @@ __meta__ = {
 }
 
 [node name="Object2" type="TextureButton" parent="."]
-margin_left = 835.821
-margin_top = 176.227
-margin_right = 987.821
-margin_bottom = 284.227
+margin_left = 827.97
+margin_top = 457.573
+margin_right = 979.97
+margin_bottom = 565.573
 texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Object3" type="TextureButton" parent="."]
-margin_left = 262.0
-margin_top = 48.0
-margin_right = 414.0
-margin_bottom = 156.0
+margin_left = 844.321
+margin_top = 164.464
+margin_right = 996.321
+margin_bottom = 272.464
 texture_normal = ExtResource( 3 )
 
 [node name="BackArrow" type="TextureButton" parent="."]
