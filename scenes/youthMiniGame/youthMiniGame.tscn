@@ -32,30 +32,30 @@ texture = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="PlayNoteGreen" type="StaticBody2D" parent="."]
-position = Vector2( 294.84, 457.765 )
+position = Vector2( 291.07, 457.883 )
 
 [node name="red" type="Sprite" parent="PlayNoteGreen"]
-scale = Vector2( 0.708673, 0.645321 )
+scale = Vector2( 0.729482, 0.699887 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteGreen"]
 shape = SubResource( 1 )
 
 [node name="PlayNoteBlue" type="StaticBody2D" parent="."]
-position = Vector2( 458.883, 457.765 )
+position = Vector2( 459.491, 457.883 )
 
 [node name="red" type="Sprite" parent="PlayNoteBlue"]
-scale = Vector2( 0.646245, 0.727169 )
+scale = Vector2( 0.729482, 0.699887 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteBlue"]
 shape = SubResource( 1 )
 
 [node name="PlayNoteYellow" type="StaticBody2D" parent="."]
-position = Vector2( 624.977, 457.765 )
+position = Vector2( 622.648, 457.883 )
 
 [node name="red" type="Sprite" parent="PlayNoteYellow"]
-scale = Vector2( 0.672604, 0.672604 )
+scale = Vector2( 0.729482, 0.699887 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNoteYellow"]
@@ -66,15 +66,15 @@ position = Vector2( 124.634, -185.227 )
 texture = ExtResource( 3 )
 
 [node name="SpawnerGreen" type="Sprite" parent="."]
-position = Vector2( 303.031, -185.227 )
+position = Vector2( 289.965, -185.227 )
 texture = ExtResource( 3 )
 
 [node name="SpawnerBlue" type="Sprite" parent="."]
-position = Vector2( 465.024, -185.227 )
+position = Vector2( 458.896, -185.227 )
 texture = ExtResource( 3 )
 
 [node name="SpawnerYellow" type="Sprite" parent="."]
-position = Vector2( 619.525, -182.954 )
+position = Vector2( 615.508, -187.447 )
 texture = ExtResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
