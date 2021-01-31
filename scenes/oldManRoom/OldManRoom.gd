@@ -30,8 +30,8 @@ func _ready():
 	if global.adult > 0:
 		get_node("Album/Old").disabled = false
 		if global.adult == 2:
-#			get_node("Object2").texture_hover = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor2.png")
-#			get_node("Object2").texture_normal = load("res://assets/images/oldManRoom/mainroom/trophy/GameTrophyColor1.png")
+			get_node("Object2").texture_hover = load("res://assets/images/oldManRoom/mainroom/photo/photoColor2.png")
+			get_node("Object2").texture_normal = load("res://assets/images/oldManRoom/mainroom/photo/photoColor1.png")
 			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/adult/GamePolaroidSuccessA.png")
 		else:
 			get_node("Album/Adult").texture_normal = load("res://assets/images/oldManRoom/album/GamePolaroidRota.png")

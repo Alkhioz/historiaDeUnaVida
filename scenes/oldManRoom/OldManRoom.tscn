@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/images/oldManRoom/oldman.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/oldManRoom/backgraound.png" type="Texture" id=2]
-[ext_resource path="res://assets/images/oldManRoom/object.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/oldManRoom/mainroom/photo/photoGray1.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/oldManRoom/mainroom/backArrow/GameBackSign.png" type="Texture" id=4]
 [ext_resource path="res://scenes/oldManRoom/OldManRoom.gd" type="Script" id=5]
 [ext_resource path="res://assets/images/oldManRoom/album/album.png" type="Texture" id=6]
@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/images/oldManRoom/explanation/close.png" type="Texture" id=9]
 [ext_resource path="res://assets/images/oldManRoom/explanation/textBox.png" type="Texture" id=10]
 [ext_resource path="res://assets/images/oldManRoom/album/youth/GamePolaroidT.png" type="Texture" id=11]
-[ext_resource path="res://assets/images/oldManRoom/photoAlbum.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/oldManRoom/oldmanHover.png" type="Texture" id=12]
 [ext_resource path="res://assets/images/oldManRoom/mainroom/backArrow/GameBackSignHover.png" type="Texture" id=13]
 [ext_resource path="res://assets/images/oldManRoom/mainroom/trophy/GameTrophyGray1.png" type="Texture" id=14]
 [ext_resource path="res://assets/images/oldManRoom/mainroom/trophy/GameTrophyGray2.png" type="Texture" id=15]
@@ -23,6 +23,8 @@
 [ext_resource path="res://assets/images/oldManRoom/mainroom/bass/bassGray2.png" type="Texture" id=21]
 [ext_resource path="res://assets/images/oldManRoom/album/old/GamePolaroidBad.png" type="Texture" id=22]
 [ext_resource path="res://assets/images/oldManRoom/album/old/GamePolaroidBadHover.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/oldManRoom/mainroom/photo/photoGray2.png" type="Texture" id=24]
+[ext_resource path="res://assets/audio/music/mixkit-relax-658.wav" type="AudioStream" id=25]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -35,22 +37,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OldMan" type="TextureButton" parent="."]
-margin_left = 440.568
-margin_top = 148.534
-margin_right = 592.568
-margin_bottom = 460.534
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="photoAlbum" type="TextureButton" parent="."]
-margin_left = 472.591
-margin_top = 302.671
-margin_right = 565.591
-margin_bottom = 417.671
-texture_normal = ExtResource( 12 )
+margin_left = 334.37
+margin_top = 131.257
+margin_right = 427.37
+margin_bottom = 246.257
+rect_scale = Vector2( 3.72574, 3.16 )
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 12 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,11 +64,13 @@ __meta__ = {
 }
 
 [node name="Object2" type="TextureButton" parent="."]
-margin_left = 827.97
-margin_top = 457.573
-margin_right = 979.97
-margin_bottom = 565.573
+margin_left = 788.0
+margin_top = 421.0
+margin_right = 969.0
+margin_bottom = 578.0
 texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 24 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -212,6 +209,10 @@ text = "I dont wanna think about that"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+autoplay = true
 [connection signal="pressed" from="photoAlbum" to="." method="_on_photoAlbum_pressed"]
 [connection signal="pressed" from="Object1" to="." method="_on_Object1_pressed"]
 [connection signal="pressed" from="Object2" to="." method="_on_Object2_pressed"]
